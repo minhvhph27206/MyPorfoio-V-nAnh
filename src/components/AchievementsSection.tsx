@@ -1,13 +1,11 @@
-"use client";
 
-import dynamic from 'react-dynamic';
+
+import dynamic from "react-dynamic";
+
 const AnimatedNumbers = dynamic(
-  () => {
-    return import("react-animated-numbers");
-  },
+  () => import("react-animated-numbers"),
   { ssr: false }
 );
-
 const achievementsList = [
   {
     metric: "Projects",

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import  { useState } from "react";
 import GithubIcon from "../assets/github-icon.svg";
 import LinkedinIcon from "../assets/linkedin-icon.svg";
 
@@ -30,7 +30,7 @@ const EmailSection = () => {
     };
 
     const response = await fetch(endpoint, options);
-    const resData = await response.json();
+    // const resData = await response.json();
 
     if (response.status === 200) {
       console.log("Message sent.");

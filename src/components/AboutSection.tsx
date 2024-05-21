@@ -1,5 +1,5 @@
 "use client";
-import React, { useTransition, useState } from "react";
+import  { useTransition, useState } from "react";
 import TabButton from "./TabButton";
 import LinkedinIcon from "../assets/image/about-image.png";
 
@@ -43,7 +43,7 @@ const TAB_DATA = [
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
-
+  console.log(isPending)
   const handleTabChange = (id:any) => {
     startTransition(() => {
       setTab(id);
@@ -88,7 +88,7 @@ const AboutSection = () => {
             </TabButton>
           </div>
           <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
+            {TAB_DATA.find((t) => t.id === tab)!.content}
           </div>
         </div>
       </div>
